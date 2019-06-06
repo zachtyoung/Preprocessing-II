@@ -356,6 +356,12 @@ nav a {
     max-width: 90%;
     margin: 0 auto;
   }
+  .contact-form div {
+    font-size: 1.5em;
+  }
+  .contact-form div .radio {
+    margin-bottom: 1em;
+  }
   .contact-form .form-input,
   .contact-form .message {
     border: none;
