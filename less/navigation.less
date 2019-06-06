@@ -1,1 +1,25 @@
-// Navigation Styles here
+
+nav{
+    .align-center();
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
+    @media @mobile{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        justify-items: center;
+        grid-row-gap: 1em;
+    }
+    a{
+        margin-right: 2em;
+        text-decoration: none;
+        color: inherit;
+        font-size: 1.75em;
+    }
+}
+.accent-line{
+    height: 2px;
+    border-bottom: 2px dashed @navigation-border;
+    max-width: 950px;
+    margin: 0 auto;
+}

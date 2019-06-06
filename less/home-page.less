@@ -1,3 +1,18 @@
+.landing{
+  .align-center();
+  border-bottom: 2px dashed @navigation-border;
+    h2{
+      margin-top: 1em;
+    }
+    p{
+      margin-bottom: 1em;
+    }
+    @media @mobile{
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
 .home {
 
   .content-section {
@@ -6,35 +21,61 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile {
+        width: 100%;
+        margin-bottom: 2em;
+      }
     }
-
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+      @media @mobile {
+        width: 100%;
+      }
       img {
         border-radius: 10px;
+        @media @mobile {
+          width: 100vw;
+        }
       }
+    }
+    @media @mobile {
+      flex-direction: column;
+      align-content: center;
+      width: 90%;
+      margin: 2em auto;
+      padding: 0;
     }
   }
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media @mobile{
+      display: grid;
+      grid-template-rows: max-content max-content;
+    
+    }
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      @media @mobile {
+        grid-row: 1;
+        margin-top: 2em;
+        padding: 0;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      @media @mobile {
+        padding: 0;
+      }
     }
   }
 
@@ -56,6 +97,65 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      .btn{
+        .btn-style();
+        @media @mobile {
+          width: 100%;
+        }
+      }
+      @media @mobile {
+        align-self: center;
+        width: 90%;
+      }
+    }
+    @media @mobile {
+      flex-direction: column;
     }
   }
 }// home
+.contact-form{
+  display: none;
+  h1{
+    justify-self: center;
+  }
+}
+@media @mobile{
+  .contact-form{
+    display: grid;
+    grid-template-rows: repeat(6, max-content);
+    padding: 0;
+    grid-row-gap: 10px;
+    max-width: 90%;
+    margin: 0 auto;
+    div {
+      font-size: 1.5em;
+      .radio{
+        margin-bottom: 1em;
+      }
+    }
+    .form-input, .message{
+      border: none;
+      background: #f4f5f7;
+      resize: none;
+      padding: 10px;
+      border: 1px solid rgb(240, 238, 238);
+      border-radius: 5px;
+      font-size: 1.5em;
+      }
+      .message{
+        height: 100px;
+      }
+      .submitBtn{
+        width: 100%;
+        margin: 10px auto;
+        padding: 8px 24px;
+        background: #01807F;
+        color: white;
+        border: none;
+        font-size: 2.5em;
+        border-radius: 10px;
+    }
+    }
+}
+
+
